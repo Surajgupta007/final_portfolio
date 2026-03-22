@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Kumar Gupta | Full Stack Web Developer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Boxicons for Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Background Animation Elements -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <a href="#" class="logo"><span class="neon-text">S</span>uraj.</a>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="home" id="home">
+        <div class="home-content hidden">
+            <h3><span class="neon-text">👋</span> Hi I'm</h3>
+            <h1 class="heading-accent">Suraj Kumar Gupta</h1>
+            <h2 class="neon-text">A <i>Full Stack Developer</i></h2>
+            <p>I am a Computer Science 3rd-year student and a full stack web developer and coder, passionate about
+                building modern web applications and solving real-world problems.</p>
+            <div class="btn-box">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#contact" class="btn btn-transparent">Contact Me</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://github.com/Surajgupta007" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/suraj-gupta-262288320/" target="_blank"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="mailto:surajkgupta011@gmail.com"><i class='bx bx-envelope'></i></a>
+            </div>
+        </div>
+
+        <div class="home-img hidden">
+            <div class="img-box">
+                <img src="assets/myphoto.JPEG" alt="Suraj Kumar Gupta">
+                <div class="neon-circle"></div>
+                <div class="floating-icon icon-1"><i class='bx bxl-react'></i></div>
+                <div class="floating-icon icon-2"><i class='bx bxl-nodejs'></i></div>
+                <div class="floating-icon icon-3"><i class='bx bxl-mongodb'></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="heading text-center hidden">
+                <span class="neon-text"><i class='bx bx-user'></i> ABOUT ME</span>
+                <h2 class="heading-accent">PASSIONATE DEVELOPER <br> & <i>PROBLEM SOLVER</i></h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text hidden">
+                    <p>At my core, I'm driven by a passion for solving complex problems through elegant code. Whether
+                        it's building scalable backends or crafting visually stunning interfaces, I believe in creating
+                        digital experiences that make a meaningful impact. My journey in tech has equipped me with a
+                        robust understanding of both structural logic and creative design.</p>
+                    <div class="cv-actions" style="margin-top: 3rem; display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                        <a href="assets/cv.pdf" class="btn" download>Download CV <i class='bx bx-download'></i></a>
+                        <a href="#" class="btn btn-transparent"
+                            onclick="openLightbox('assets/cv.pdf', 'pdf'); return false;">View CV <i
+                                class='bx bx-show'></i></a>
+                    </div>
+                </div>
+
+                <!-- Education Timeline -->
+                <div class="timeline hidden">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>B.Tech Computer Science & Engineering</h3>
+                            <span class="neon-text">2022 – 2026 | Lovely Professional University, Jalandhar</span>
+                            <p>Focus: Web Development, DSA, React, Node.js, Cloud Computing</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>12th Grade</h3>
+                            <span class="neon-text">2020 – 2022 | The Assembly of God Higher Secondary School</span>
+                            <p>Percentage: 79%</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>10th Grade</h3>
+                            <span class="neon-text">2018 – 2020 | Saint Thomas English School</span>
+                            <p>Percentage: 87%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="heading text-center hidden">
+            <span class="neon-text"><i class='bx bx-brain'></i> EXPERTISE</span>
+            <h2 class="heading-accent">MY CORE <i>SKILLS</i></h2>
+        </div>
+
+        <div class="skills-container hidden">
+            <div class="skills-box">
+                <h3><i class='bx bx-code-alt'></i> Frontend</h3>
+                <div class="skills-tags">
+                    <span>React</span><span>Vue.js</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span>
+                </div>
+            </div>
+
+            <div class="skills-box">
+                <h3><i class='bx bx-server'></i> Backend</h3>
+                <div class="skills-tags">
+                    <span>Node.js</span><span>Express.js</span><span>REST APIs</span>
+                </div>
+            </div>
+
+            <div class="skills-box">
+                <h3><i class='bx bx-data'></i> Database</h3>
+                <div class="skills-tags">
+                    <span>MongoDB</span><span>PostgreSQL</span><span>MySQL</span>
+                </div>
+            </div>
+
+            <div class="skills-box">
+                <h3><i class='bx bx-wrench'></i> Tools & Langs</h3>
+                <div class="skills-tags">
+                    <span>Git</span><span>VS
+                        Code</span><span>Linux</span><span>Figma</span><span>C++</span><span>Java</span>
+                </div>
+            </div>
+
+            <div class="skills-box">
+                <h3><i class='bx bx-cloud'></i> Cloud</h3>
+                <div class="skills-tags">
+                    <span>AWS</span><span>Google Cloud</span>\<span>Cloudinary</span><span>Vercel</span>
+                </div>
+            </div>
+
+            <div class="skills-box">
+                <h3><i class='bx bx-git-branch'></i> DevOps</h3>
+                <div class="skills-tags">
+                    <span>Docker</span><span>Kubernetes</span><span>CI/CD</span><span>GitHub
+                        Actions</span><span>Nginx</span><span>Linux Server</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="heading text-center hidden">
+            <span class="neon-text"><i class='bx bx-briefcase-alt'></i> WHAT I DO</span>
+            <h2 class="heading-accent">QUALITY <i>SERVICES</i></h2>
+        </div>
+
+        <div class="services-container hidden">
+            <div class="service-box">
+                <i class='bx bx-window-alt service-icon'></i>
+                <h3>Web Development</h3>
+                <p>Building responsive, scalable and robust web applications with modern frontend and backend frameworks
+                    to deliver seamless digital experiences.</p>
+                <a href="#contact" class="btn btn-transparent" style="margin-top: 2rem; padding: 0.8rem 1.5rem;">Let's
+                    Talk <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+
+            <div class="service-box">
+                <i class='bx bx-palette service-icon'></i>
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive, beautiful user interfaces and smooth user experiences with a focus on modern
+                    aesthetic principles and accessibility.</p>
+                <a href="#contact" class="btn btn-transparent" style="margin-top: 2rem; padding: 0.8rem 1.5rem;">Let's
+                    Talk <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="heading text-center hidden">
+            <span class="neon-text"><i class='bx bx-folder-open'></i> PORTFOLIO</span>
+            <h2 class="heading-accent">FEATURED <i>PROJECTS</i></h2>
+        </div>
+
+        <div class="projects-container hidden">
+            <!-- Project 1: AI Teacher -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="assets/landingpages_images/aiteacher.png" alt="AI Teacher" class="project-bg-img">
+                    <div class="project-overlay">
+                        <a href="https://ai-tutor-frontend-r28eh3fc7-sumits-projects-dfda4785.vercel.app/" target="_blank" class="overlay-link">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>AI Teacher</h3>
+                    <div class="project-tags">
+                        <span>MERN Stack</span><span>React</span><span>AI</span>
+                    </div>
+                    <p>AI-Based Exam Preparation Platform featuring PDF upload, AI learning, quizzes, flashcards, and a
+                        smart revision mode.</p>
+                    <div class="project-notice">
+                        <i class='bx bx-info-circle'></i>
+                        <span>Click the backend link first to activate the server on Render (may take ~30s to wake up).</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://aiteacherbackend.onrender.com/" target="_blank" class="btn btn-sm btn-backend">
+                            <i class='bx bx-server'></i> Activate Backend
+                        </a>
+                        <a href="https://ai-tutor-frontend-r28eh3fc7-sumits-projects-dfda4785.vercel.app/" target="_blank" class="btn btn-sm">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: AI Review Summarizer -->
+            <div class="project-card">
+                <a href="https://surajgupta007.github.io/Product-Review-Summarizer/" target="_blank" class="project-card-link">
+                    <div class="project-img">
+                        <img src="assets/landingpages_images/reviewsummarizer.png" alt="AI Review Summarizer" class="project-bg-img">
+                        <div class="project-overlay">
+                            <i class='bx bx-link-external'></i>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-content">
+                    <h3>AI Review Summarizer</h3>
+                    <div class="project-tags">
+                        <span>HTML/CSS</span><span>JS</span><span>Gemini API</span>
+                    </div>
+                    <p>Summarizes e-commerce reviews dynamically using the Google Gemini API to extract key insights
+                        instantly.</p>
+                    <div class="project-links">
+                        <a href="https://surajgupta007.github.io/Product-Review-Summarizer/" target="_blank" class="btn btn-sm">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Coffee Shop Page Design -->
+            <div class="project-card">
+                <a href="https://surajgupta007.github.io/CoffeShopDemo/" target="_blank" class="project-card-link">
+                    <div class="project-img">
+                        <img src="assets/landingpages_images/coffeeshop.png" alt="Coffee Shop Design" class="project-bg-img">
+                        <div class="project-overlay">
+                            <i class='bx bx-link-external'></i>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-content">
+                    <h3>Coffee Shop Page Design</h3>
+                    <div class="project-tags">
+                        <span>HTML/CSS</span><span>UI/UX</span><span>Responsive</span>
+                    </div>
+                    <p>A beautifully crafted coffee shop landing page with modern design aesthetics, smooth animations, and a premium UI experience.</p>
+                    <div class="project-links">
+                        <a href="https://surajgupta007.github.io/CoffeShopDemo/" target="_blank" class="btn btn-sm">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Multistore -->
+            <div class="project-card">
+                <a href="https://apistore-plum.vercel.app/" target="_blank" class="project-card-link">
+                    <div class="project-img">
+                        <img src="assets/landingpages_images/multistore.png" alt="Multistore" class="project-bg-img">
+                        <div class="project-overlay">
+                            <i class='bx bx-link-external'></i>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-content">
+                    <h3>Multistore</h3>
+                    <div class="project-tags">
+                        <span>APIs</span><span>React</span><span>Multi-Service</span>
+                    </div>
+                    <p>A multi-service platform integrating multiple APIs to offer movies, e-commerce, weather updates, and more — all in one place.</p>
+                    <div class="project-links">
+                        <a href="https://apistore-plum.vercel.app/" target="_blank" class="btn btn-sm">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: College Club Design -->
+            <div class="project-card">
+                <a href="https://surajgupta007.github.io/collegeclub/" target="_blank" class="project-card-link">
+                    <div class="project-img">
+                        <img src="assets/landingpages_images/collegeclub.png" alt="College Club Design" class="project-bg-img">
+                        <div class="project-overlay">
+                            <i class='bx bx-link-external'></i>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-content">
+                    <h3>College Club Design</h3>
+                    <div class="project-tags">
+                        <span>HTML/CSS</span><span>JS</span><span>Design</span>
+                    </div>
+                    <p>A modern and vibrant college club landing page design featuring event showcases, team sections, and an engaging UI layout.</p>
+                    <div class="project-links">
+                        <a href="https://surajgupta007.github.io/collegeclub/" target="_blank" class="btn btn-sm">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: UniMart -->
+            <div class="project-card">
+                <a href="https://unimartfrontend.vercel.app/" target="_blank" class="project-card-link">
+                    <div class="project-img">
+                        <img src="assets/landingpages_images/unimart.png" alt="UniMart" class="project-bg-img">
+                        <div class="project-overlay">
+                            <i class='bx bx-link-external'></i>
+                        </div>
+                    </div>
+                </a>
+                <div class="project-content">
+                    <h3>UniMart</h3>
+                    <div class="project-tags">
+                        <span>MERN Stack</span><span>React</span><span>Marketplace</span>
+                    </div>
+                    <p>University Marketplace for Smart Students — buy and sell books, electronics, furniture, and more within your campus securely and easily.</p>
+                    <div class="project-links">
+                        <a href="https://unimartfrontend.vercel.app/" target="_blank" class="btn btn-sm">
+                            <i class='bx bx-link-external'></i> Live Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+        <div class="heading text-center hidden">
+            <span class="neon-text"><i class='bx bx-award'></i> ACHIEVEMENTS</span>
+            <h2 class="heading-accent">MY <i>CERTIFICATIONS</i></h2>
+        </div>
+
+        <div class="cert-container hidden">
+            <!-- Cloud Computing -->
+            <div class="cert-card-new">
+                <div class="cert-img-wrapper">
+                    <img src="assets/certificates/cloud_computing.png" alt="Cloud Computing Certificate" loading="lazy">
+                    <div class="cert-overlay">
+                        <button class="cert-action-btn"
+                            onclick="openLightbox('assets/certificates/cloud_computing.png', 'image')" title="View">
+                            <i class='bx bx-show'></i>
+                        </button>
+                        <a href="assets/certificates/cloud_computing.png" download class="cert-action-btn"
+                            title="Download">
+                            <i class='bx bx-download'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="cert-details">
+                    <h3>Cloud Computing</h3>
+                    <p>NPTEL</p>
+                </div>
+            </div>
+
+            <!-- Generative AI -->
+            <div class="cert-card-new">
+                <div class="cert-img-wrapper">
+                    <img src="assets/certificates/genrative.png" alt="Generative AI Certificate" loading="lazy">
+                    <div class="cert-overlay">
+                        <button class="cert-action-btn"
+                            onclick="openLightbox('assets/certificates/genrative.png', 'image')" title="View">
+                            <i class='bx bx-show'></i>
+                        </button>
+                        <a href="assets/certificates/genrative.png" download class="cert-action-btn" title="Download">
+                            <i class='bx bx-download'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="cert-details">
+                    <h3>Generative AI</h3>
+                    <p>Google Cloud</p>
+                </div>
+            </div>
+
+            <!-- Java -->
+            <div class="cert-card-new">
+                <div class="cert-img-wrapper">
+                    <img src="assets/certificates/java.png" alt="Java Certificate" loading="lazy">
+                    <div class="cert-overlay">
+                        <button class="cert-action-btn" onclick="openLightbox('assets/certificates/java.png', 'image')"
+                            title="View">
+                            <i class='bx bx-show'></i>
+                        </button>
+                        <a href="assets/certificates/java.png" download class="cert-action-btn" title="Download">
+                            <i class='bx bx-download'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="cert-details">
+                    <h3>Java Programming</h3>
+                    <p>HackerRank</p>
+                </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="cert-card-new">
+                <div class="cert-img-wrapper">
+                    <img src="assets/certificates/javascript.png" alt="JavaScript Certificate" loading="lazy">
+                    <div class="cert-overlay">
+                        <button class="cert-action-btn"
+                            onclick="openLightbox('assets/certificates/javascript.png', 'image')" title="View">
+                            <i class='bx bx-show'></i>
+                        </button>
+                        <a href="assets/certificates/javascript.png" download class="cert-action-btn" title="Download">
+                            <i class='bx bx-download'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="cert-details">
+                    <h3>JavaScript</h3>
+                    <p>HackerRank</p>
+                </div>
+            </div>
+
+            <!-- Responsive Web Design -->
+            <div class="cert-card-new">
+                <div class="cert-img-wrapper">
+                    <img src="assets/certificates/responsive.png" alt="Responsive Web Design Certificate"
+                        loading="lazy">
+                    <div class="cert-overlay">
+                        <button class="cert-action-btn"
+                            onclick="openLightbox('assets/certificates/responsive.png', 'image')" title="View">
+                            <i class='bx bx-show'></i>
+                        </button>
+                        <a href="assets/certificates/responsive.png" download class="cert-action-btn" title="Download">
+                            <i class='bx bx-download'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="cert-details">
+                    <h3>Responsive Web Design</h3>
+                    <p>freeCodeCamp</p>
+                </div>
+            </div>
+
+            <!-- Oracle AI Associate -->
+            <div class="cert-card-new">
+                <div class="cert-img-wrapper">
+                    <img src="assets/certificates/Oracle_Ai_Associate.png" alt="Oracle AI Associate Certificate"
+                        loading="lazy">
+                    <div class="cert-overlay">
+                        <button class="cert-action-btn"
+                            onclick="openLightbox('assets/certificates/Oracle_Ai_Associate.png', 'image')" title="View">
+                            <i class='bx bx-show'></i>
+                        </button>
+                        <a href="assets/certificates/Oracle_Ai_Associate.png" download class="cert-action-btn"
+                            title="Download">
+                            <i class='bx bx-download'></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="cert-details">
+                    <h3>Oracle AI Associate</h3>
+                    <p>Oracle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="heading text-center hidden">
+            <span class="neon-text"><i class='bx bx-envelope'></i> GET IN TOUCH</span>
+            <h2 class="heading-accent">CONTACT <i>ME</i></h2>
+        </div>
+
+        <div class="contact-container hidden">
+            <div class="contact-info">
+                <h3>Let's work together!</h3>
+                <p>I am actively seeking opportunities to apply my skills in real-world projects and contribute to
+                    innovative development teams. Feel free to reach out for collaborations or just a friendly hello.
+                </p>
+
+                <div class="info-item">
+                    <i class='bx bx-mail-send'></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:surajkgupta011@gmail.com">surajkgupta011@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class='bx bx-phone'></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 9090855969</p>
+                    </div>
+                </div>
+
+                <div class="social-icons" style="margin-top: 3rem;">
+                    <a href="https://github.com/Surajgupta007" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/suraj-gupta-262288320/" target="_blank"><i
+                            class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="number" name="phone" placeholder="Mobile Number">
+                    <input type="text" name="subject" placeholder="Email Subject" required>
+                </div>
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn" id="submitBtn">Send Message <i class='bx bx-send'></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>&copy; 2026 by Suraj Kumar Gupta | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">
+            <i class='bx bx-x'></i>
+        </button>
+        <div class="lightbox-content" id="lightboxContent">
+            <!-- Dynamic content injected by JS -->
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
