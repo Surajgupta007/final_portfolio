@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suraj Kumar Gupta | Full Stack Web Developer</title>
+    <meta name="description" content="Portfolio of Suraj Kumar Gupta — Full Stack Web Developer specializing in MERN stack, React, Node.js, and modern web applications.">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +20,23 @@
 
 <body>
 
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+        <span class="loader-text">Loading</span>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Particle Background Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
     <!-- Background Animation Elements -->
     <div class="bg-glow bg-glow-1"></div>
     <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
 
     <!-- Header / Navbar -->
     <header class="header">
@@ -37,6 +52,7 @@
             <a href="#projects">Projects</a>
             <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
+            <a href="assets/cv.pdf" class="nav-cv-btn" download><i class='bx bx-file'></i> CV</a>
         </nav>
     </header>
 
@@ -45,12 +61,13 @@
         <div class="home-content hidden">
             <h3><span class="neon-text">👋</span> Hi I'm</h3>
             <h1 class="heading-accent">Suraj Kumar Gupta</h1>
-            <h2 class="neon-text">A <i>Full Stack Developer</i></h2>
+            <h2 class="neon-text">A <i class="typing-text" id="typingText"></i></h2>
             <p>I am a Computer Science 3rd-year student and a full stack web developer and coder, passionate about
                 building modern web applications and solving real-world problems.</p>
             <div class="btn-box">
                 <a href="#projects" class="btn">View Projects</a>
                 <a href="#contact" class="btn btn-transparent">Contact Me</a>
+                <a href="#" class="btn btn-cv" onclick="openLightbox('assets/cv.pdf', 'pdf'); return false;"><i class='bx bx-file-blank'></i> View CV</a>
             </div>
 
             <div class="social-icons">
@@ -68,7 +85,28 @@
                 <div class="floating-icon icon-1"><i class='bx bxl-react'></i></div>
                 <div class="floating-icon icon-2"><i class='bx bxl-nodejs'></i></div>
                 <div class="floating-icon icon-3"><i class='bx bxl-mongodb'></i></div>
+                <div class="floating-icon icon-4"><i class='bx bxl-javascript'></i></div>
+                <div class="floating-icon icon-5"><i class='bx bxl-docker'></i></div>
+                <div class="floating-icon icon-6"><i class='bx bxl-css3'></i></div>
             </div>
+        </div>
+
+        <!-- Floating Code Symbols in Background -->
+        <div class="hero-floating-symbols">
+            <span class="code-symbol sym-1">&lt;/&gt;</span>
+            <span class="code-symbol sym-2">{ }</span>
+            <span class="code-symbol sym-3">( )</span>
+            <span class="code-symbol sym-4">;</span>
+            <span class="code-symbol sym-5">//</span>
+            <span class="code-symbol sym-6">**</span>
+            <span class="code-symbol sym-7">=&gt;</span>
+            <span class="code-symbol sym-8">[ ]</span>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+            <div class="mouse"></div>
+            <span>Scroll</span>
         </div>
     </section>
 
@@ -78,10 +116,11 @@
             <div class="heading text-center hidden">
                 <span class="neon-text"><i class='bx bx-user'></i> ABOUT ME</span>
                 <h2 class="heading-accent">PASSIONATE DEVELOPER <br> & <i>PROBLEM SOLVER</i></h2>
+                <div class="section-divider"></div>
             </div>
 
             <div class="about-content">
-                <div class="about-text hidden">
+                <div class="about-text hidden-left">
                     <p>At my core, I'm driven by a passion for solving complex problems through elegant code. Whether
                         it's building scalable backends or crafting visually stunning interfaces, I believe in creating
                         digital experiences that make a meaningful impact. My journey in tech has equipped me with a
@@ -95,7 +134,7 @@
                 </div>
 
                 <!-- Education Timeline -->
-                <div class="timeline hidden">
+                <div class="timeline hidden-right">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
@@ -132,9 +171,10 @@
         <div class="heading text-center hidden">
             <span class="neon-text"><i class='bx bx-brain'></i> EXPERTISE</span>
             <h2 class="heading-accent">MY CORE <i>SKILLS</i></h2>
+            <div class="section-divider"></div>
         </div>
 
-        <div class="skills-container hidden">
+        <div class="skills-container hidden stagger-children">
             <div class="skills-box">
                 <h3><i class='bx bx-code-alt'></i> Frontend</h3>
                 <div class="skills-tags">
@@ -159,15 +199,14 @@
             <div class="skills-box">
                 <h3><i class='bx bx-wrench'></i> Tools & Langs</h3>
                 <div class="skills-tags">
-                    <span>Git</span><span>VS
-                        Code</span><span>Linux</span><span>Figma</span><span>C++</span><span>Java</span>
+                    <span>Git</span><span>VS Code</span><span>Linux</span><span>Figma</span><span>C++</span><span>Java</span>
                 </div>
             </div>
 
             <div class="skills-box">
                 <h3><i class='bx bx-cloud'></i> Cloud</h3>
                 <div class="skills-tags">
-                    <span>AWS</span><span>Google Cloud</span>\<span>Cloudinary</span><span>Vercel</span>
+                    <span>AWS</span><span>Google Cloud</span><span>Cloudinary</span><span>Vercel</span>
                 </div>
             </div>
 
@@ -186,9 +225,10 @@
         <div class="heading text-center hidden">
             <span class="neon-text"><i class='bx bx-briefcase-alt'></i> WHAT I DO</span>
             <h2 class="heading-accent">QUALITY <i>SERVICES</i></h2>
+            <div class="section-divider"></div>
         </div>
 
-        <div class="services-container hidden">
+        <div class="services-container hidden stagger-children">
             <div class="service-box">
                 <i class='bx bx-window-alt service-icon'></i>
                 <h3>Web Development</h3>
@@ -214,9 +254,10 @@
         <div class="heading text-center hidden">
             <span class="neon-text"><i class='bx bx-folder-open'></i> PORTFOLIO</span>
             <h2 class="heading-accent">FEATURED <i>PROJECTS</i></h2>
+            <div class="section-divider"></div>
         </div>
 
-        <div class="projects-container hidden">
+        <div class="projects-container hidden stagger-children">
             <!-- Project 1: AI Teacher -->
             <div class="project-card">
                 <div class="project-img">
@@ -389,9 +430,10 @@
         <div class="heading text-center hidden">
             <span class="neon-text"><i class='bx bx-award'></i> ACHIEVEMENTS</span>
             <h2 class="heading-accent">MY <i>CERTIFICATIONS</i></h2>
+            <div class="section-divider"></div>
         </div>
 
-        <div class="cert-container hidden">
+        <div class="cert-container hidden stagger-children">
             <!-- Cloud Computing -->
             <div class="cert-card-new">
                 <div class="cert-img-wrapper">
@@ -429,7 +471,7 @@
                 </div>
                 <div class="cert-details">
                     <h3>Generative AI</h3>
-                    <p>Udemy</p>
+                    <p>Google Cloud</p>
                 </div>
             </div>
 
@@ -523,28 +565,45 @@
         <div class="heading text-center hidden">
             <span class="neon-text"><i class='bx bx-envelope'></i> GET IN TOUCH</span>
             <h2 class="heading-accent">CONTACT <i>ME</i></h2>
+            <div class="section-divider"></div>
         </div>
 
-        <div class="contact-container hidden">
-            <div class="contact-info">
-                <h3>Let's work together!</h3>
-                <p>I am actively seeking opportunities to apply my skills in real-world projects and contribute to
-                    innovative development teams. Feel free to reach out for collaborations or just a friendly hello.
-                </p>
-
-                <div class="info-item">
-                    <i class='bx bx-mail-send'></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p><a href="mailto:surajkgupta011@gmail.com">surajkgupta011@gmail.com</a></p>
+        <div class="contact-container">
+            <div class="contact-info hidden-left">
+                <div class="contact-info-header">
+                    <div class="availability-badge">
+                        <span class="pulse-dot"></span>
+                        Available for work
                     </div>
+                    <h3>Let's work together!</h3>
+                    <p>I am actively seeking opportunities to apply my skills in real-world projects and contribute to
+                        innovative development teams. Feel free to reach out for collaborations or just a friendly hello.
+                    </p>
                 </div>
 
-                <div class="info-item">
-                    <i class='bx bx-phone'></i>
-                    <div>
-                        <h4>Phone</h4>
-                        <p>+91 9090855969</p>
+                <div class="info-items-wrapper">
+                    <div class="info-item">
+                        <i class='bx bx-mail-send'></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:surajkgupta011@gmail.com">surajkgupta011@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class='bx bx-phone'></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 9090855969</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class='bx bx-map'></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>India</p>
+                        </div>
                     </div>
                 </div>
 
@@ -555,17 +614,39 @@
                 </div>
             </div>
 
-            <form id="contactForm" class="contact-form">
-                <div class="input-box">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
+            <form id="contactForm" class="contact-form hidden-right">
+                <div class="form-header">
+                    <h3><i class='bx bx-message-dots'></i> Send a Message</h3>
+                    <p>Fill out the form and I'll get back to you as soon as possible.</p>
                 </div>
                 <div class="input-box">
-                    <input type="number" name="phone" placeholder="Mobile Number">
-                    <input type="text" name="subject" placeholder="Email Subject" required>
+                    <div class="form-group">
+                        <input type="text" name="name" id="formName" placeholder=" " required>
+                        <label for="formName"><i class='bx bx-user'></i> Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="formEmail" placeholder=" " required>
+                        <label for="formEmail"><i class='bx bx-envelope'></i> Email Address</label>
+                    </div>
                 </div>
-                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn" id="submitBtn">Send Message <i class='bx bx-send'></i></button>
+                <div class="input-box">
+                    <div class="form-group">
+                        <input type="number" name="phone" id="formPhone" placeholder=" ">
+                        <label for="formPhone"><i class='bx bx-phone'></i> Mobile Number</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" id="formSubject" placeholder=" " required>
+                        <label for="formSubject"><i class='bx bx-text'></i> Email Subject</label>
+                    </div>
+                </div>
+                <div class="form-group form-group-full">
+                    <textarea name="message" id="formMessage" cols="30" rows="10" placeholder=" " required></textarea>
+                    <label for="formMessage"><i class='bx bx-message-detail'></i> Your Message</label>
+                </div>
+                <button type="submit" class="btn contact-submit-btn" id="submitBtn">
+                    <span>Send Message</span>
+                    <i class='bx bx-send'></i>
+                </button>
             </form>
         </div>
     </section>
@@ -579,6 +660,11 @@
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class='bx bx-chevron-up'></i>
+    </a>
 
     <!-- Lightbox Modal -->
     <div class="lightbox-modal" id="lightboxModal">
