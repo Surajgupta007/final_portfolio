@@ -2646,3 +2646,41 @@ section {
             left: 2px;
         }
     }
+
+    /* ===== Optimize Animations for Phone ===== */
+    @media (max-width: 768px) {
+        .hidden,
+        .hidden-left,
+        .hidden-right {
+            transition: none !important;
+            opacity: 1 !important;
+            transform: none !important;
+            filter: none !important;
+        }
+
+        .stagger-children.show > * {
+            animation: none !important;
+            opacity: 1 !important;
+        }
+
+        .bg-glow,
+        .hero-floating-symbols {
+            display: none !important;
+            animation: none !important;
+        }
+
+        .neon-circle, .neon-circle::after {
+            animation: none !important;
+            display: none !important;
+        }
+
+        .floating-icon {
+            animation: none !important;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
+        .home-content h1, .heading h2 {
+            animation: none !important;
+        }
+    }

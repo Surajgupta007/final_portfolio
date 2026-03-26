@@ -1,9 +1,10 @@
 /* ===== Loading Screen ===== */
 window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loadingScreen');
+    const delay = window.innerWidth <= 768 ? 100 : 800;
     setTimeout(() => {
         loadingScreen.classList.add('hidden');
-    }, 800);
+    }, delay);
 });
 
 /* ===== Custom Cursor ===== */
@@ -40,7 +41,7 @@ if (cursorDot && cursorRing && window.innerWidth > 991) {
 
 /* ===== Particle Background ===== */
 const canvas = document.getElementById('particleCanvas');
-if (canvas) {
+if (canvas && window.innerWidth > 768) {
     const ctx = canvas.getContext('2d');
     let particles = [];
     const particleCount = 60;
